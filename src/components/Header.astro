@@ -1,0 +1,19 @@
+---
+interface Props {
+	currentPage: string;
+}
+const {currentPage} = Astro.props;
+console.log(currentPage)
+---
+
+<header class="flex px-[100px] py-[17px] justify-between items-center text-[20px]">
+    <div class="flex gap-[3px] items-center">
+        <img src="Logo.svg" alt="Logo">
+        <span>LinkHub.Space</span>
+    </div>
+    <div class="flex gap-[36px] font-semibold">
+        <a href="/" class=`${currentPage === 'home' && 'text-primary'}`>Home</a>
+        <a href="/about-us" class=`${currentPage === 'about-us' && 'text-primary'}`>About Us</a>
+    </div>
+    <button class="text-[18px] bg-primary text-basicWhite px-[21px] py-[5px] rounded-full">SignUp/Login</button>
+</header>

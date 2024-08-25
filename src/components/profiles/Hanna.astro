@@ -1,0 +1,15 @@
+---
+const uniqueId = 'hanna'
+const pathId = uniqueId + 'path';
+---
+
+  <svg width="342" height="410" viewBox="0 0 342 410" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path id={pathId} d="M138.123 0.5H279.358L342 29.217V156.703L252.123 409.5H82.8737L0 316.822L47.8567 177.153L82.8737 156.703L138.123 0.5Z" fill="#FFF1FF"/>
+    
+    <clipPath id={uniqueId}>
+        <use href={`#${pathId}`} />
+      </clipPath>
+    
+      <image clip-path=`url(#${uniqueId})` href="images/hanna.png" width="275" x="67" y="38" />
+</svg>
+    

@@ -1,0 +1,20 @@
+---
+interface Props{
+    title : string
+    name : string
+    fieldOfStudy : string
+    linkedInLink : string
+    whatsAppLink : string
+}
+const {title, name, fieldOfStudy, linkedInLink, whatsAppLink} = Astro.props;
+---
+
+<div>
+    <h3>{title}</h3>
+    <h1>{name}</h1>
+    <p>{fieldOfStudy}</p>
+    <div class="flex">
+        <a href={linkedInLink}><img src="icons/Linkedin.svg" alt="Linkedin"></a>
+        <a href={whatsAppLink}><img src="icons/whatsapp.svg" alt="Whatsapp"></a>
+    </div>
+</div>

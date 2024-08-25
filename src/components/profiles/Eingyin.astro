@@ -1,0 +1,17 @@
+---
+const uniqueId = 'eingyin'
+const pathId = uniqueId + 'path';
+---
+
+
+<svg width="745" height="272" viewBox="0 0 745 272" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path id={pathId} d="M352 23.7321L392.5 0H720.5L744.5 49.5V99L720.5 129.768H666.5L498.5 272H81.5L0 212.5L35.5 146.5H168L302.5 23.7321H352Z" fill="#FFF1FF"/>
+   
+
+    <clipPath id={uniqueId}>
+        <use href={`#${pathId}`} />
+      </clipPath>
+    
+      <image clip-path=`url(#${uniqueId})` href="images/Eingyin.png" width="204" x="67" y="50" />
+</svg>
+    
