@@ -3,5 +3,81 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title="LinkHub.Space">
-	Home
+	<section class="container mx-auto py-10 grid grid-cols-1 gap-4 md:grid-cols-2 place-items-center">
+		<div class="text-[#2f2f2f] text-5xl px-4">
+			<h1 class="font-bold relative mb-2 w-fit">
+				<img src="home/cap_left.svg" class="absolute -top-2 -left-4 h-120%">
+				<img src="home/avatars.png" class="absolute -top-6 -right-22 w-100px">
+				<span>Unlock Growth</span>
+			</h1>
+			<h1 class="font-bold mb-2">
+				<span>with the</span>
+			</h1>
+			<h1 class="font-bold relative w-fit">
+				<span>perfect </span>
+				<span class="text-secondary italic">partner</span>
+				<img src="home/arrow.svg" class="absolute -right-16 top-2">
+				<img src="home/cap_right.png" class="absolute -right-20 top-0 h-120%">
+			</h1>
+
+			<p class="mt-4 text-lg">
+				Connect with powerful influencers on our platform and make your brand the next big thing!
+			</p>
+		</div>
+
+		<div class="px-4">
+			<img src="home/mask1_full.svg" />
+		</div>
+	</section>
+
+	<section class="container mx-auto px-4 py-10 relative">
+		<img src="home/mask2.png" class="h-300px md:h-unset" >
+
+		<p class="bg-primary text-white text-sm md:text-3xl absolute italic max-w-2/5 px-6 py-6 rounded-3xl top-30% left-40% md:left-35%">
+			Looking for influencers to promote your product?
+		</p>
+
+		<p class="bg-primary text-white text-sm md:text-3xl absolute italic max-w-2/5 px-6 py-6 rounded-3xl top-60% left-50% md:left-40%">
+			Are you influencer to boost your reputation?
+		</p>
+
+		<div class="w-full absolute top-10% text-center">
+			<h1 class="text-3xl md:text-5xl font-bold">
+				<span>We help to</span>
+				<span class="italic text-secondary">Build</span>
+			</h1>
+			<h1 class="text-3xl md:text-5xl font-bold italic text-secondary">Your Brand</h1>
+		</div>
+	</section>
+
+	<section class="py-10 container mx-auto grid grid-cols-1 md:grid-cols-2">
+		<div class="w-full self-center text-center px-4">
+			<div class="max-w-fit text-left mx-auto mb-4 font-bold">
+				<h3 class="italic text-xl md:text-3xl">Our</h3>
+				<h1 class="text-secondary text-6xl">VISION</h1>
+			</div>
+			<p class="max-w-500px mx-auto">To build a swipe-based platform that effortlessly connects rising influencers and small businesses, making collaborations faster, easier, and more effective.</p>
+		</div>
+
+		<div class="justify-self-end">
+			<img src="home/prototype.png" class="max-h-500px" >
+		</div>
+	</section>
+
+
+	<section class="py-10 px-4 container mx-auto grid grid-cols-1 md:grid-cols-2">
+		<div class="justify-self-center">
+			<img src="home/mask3.png" class="max-h-500px" >
+		</div>
+
+		<div class="w-full self-center text-center">
+			<div class="max-w-fit text-left mx-auto mb-4 font-bold">
+				<h3 class="italic text-xl md:text-3xl">Our</h3>
+				<h1 class="text-secondary text-6xl md:text-6xl">MISSION</h1>
+			</div>
+			<p class="max-w-500px mx-auto">
+				Empowering influencers with visibility and brand deals while helping small businesses find budget-friendly partners, our swipe-based platform simplifies and streamlines connections for everyone.
+			</p>
+		</div>
+	</section>
 </BaseLayout>

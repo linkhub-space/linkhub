@@ -1,19 +1,47 @@
 ---
-interface Props {
-	currentPage: string;
+const LINKS = [
+    { href: "/", label: "Home" },
+    { href: "/about-us", label: "About Us" },
+]
+function generateLinkStyle(href: string) {
+    let style = "text-lg hover:(text-primary text-opacity-80)"
+
+    if (href === Astro.url.pathname) style += " text-primary underline-offset-4 underline underline-wavy"
+    else style += " text-black"
+
+    return style
 }
-const {currentPage} = Astro.props;
-console.log(currentPage)
 ---
 
-<header class="flex px-[100px] py-[17px] justify-between items-center text-[20px]">
-    <div class="flex gap-[3px] items-center">
+<header class="container mx-auto p-4 flex gap-8 items-center">
+    <a href="/" class="justify-self-start self-center flex gap-1 items-center">
         <img src="Logo.svg" alt="Logo">
-        <span>LinkHub.Space</span>
-    </div>
-    <div class="flex gap-[36px] font-semibold">
-        <a href="/" class=`${currentPage === 'home' && 'text-primary'}`>Home</a>
-        <a href="/about-us" class=`${currentPage === 'about-us' && 'text-primary'}`>About Us</a>
-    </div>
-    <button class="text-[18px] bg-primary text-basicWhite px-[21px] py-[5px] rounded-full">SignUp/Login</button>
+        <span class="text-xs md:text-sm">LinkHub.Space</span>
+    </a>
+
+    <nav class="flex items-center gap-4">
+        {LINKS.map((link) => (
+            <a
+                href={link.href}
+                class={generateLinkStyle(link.href)}
+            >
+                {link.label}
+            </a>
+        ))}
+    </nav>
+
+    <!-- <div class="justify-self-end self-center flex gap-6 font-semibold">
+        {LINKS.map((link) => (
+            <a
+                href={link.href}
+                class={generateLinkStyle(link.href)}
+            >
+                {link.label}
+            </a>
+        ))}
+    </div> -->
+
+    <!-- <div class="justify-self-end self-center">
+        <button class="text-[18px] bg-primary text-basicWhite px-[21px] py-[5px] rounded-full">SignUp/Login</button>
+    </div> -->
 </header>
