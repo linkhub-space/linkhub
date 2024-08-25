@@ -1,20 +1,22 @@
 ---
 interface Props{
-    title : string
+    data : {
+        title : string
     name : string
     fieldOfStudy : string
     linkedInLink : string
     whatsAppLink : string
+    }
 }
-const {title, name, fieldOfStudy, linkedInLink, whatsAppLink} = Astro.props;
+const {data} = Astro.props;
 ---
 
-<div>
-    <h3>{title}</h3>
-    <h1>{name}</h1>
-    <p>{fieldOfStudy}</p>
-    <div class="flex">
-        <a href={linkedInLink}><img src="icons/Linkedin.svg" alt="Linkedin"></a>
-        <a href={whatsAppLink}><img src="icons/whatsapp.svg" alt="Whatsapp"></a>
+<div class="w-full h-full">
+    <h3 class="text-[14px] md:text-[32px] font-semibold">{data.title}</h3>
+    <h1 class="text-primary text-[18px] md:text-[44px] font-bold max-w-[50vw] leading-[-20px] md:leading-normal">{data.name}</h1>
+    <p class="md:text-[24px] text-[12px] font-light">{data.fieldOfStudy}</p>
+    <div class="flex gap-[8px] md:gap-[16px]">
+        <a href={data.linkedInLink}><img src="icons/Linkedin.svg" alt="Linkedin" class="w-[16px] md:w-auto"></a>
+        <a href={data.whatsAppLink}><img src="icons/whatsapp.svg" alt="Whatsapp" class="w-[16px] md:w-auto"></a>
     </div>
 </div>
